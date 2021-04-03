@@ -1,14 +1,17 @@
 @import "./variables";
 @import "./global";
 
-// ! Header & Footer (Antareep)
-@import "./header-footer";
+//! Header (Antareep)
+@import "../components/header/header";
 
-// ! Hero (Rahi)
-@import "./hero";
+//! Hero (Touhid)
+@import "../components/hero/hero";
 
-// ! Services (Rajvir)
-@import "./services";
+//! Services (Rajvir)
+@import "../components/services/services";
 
-// ! Articles (Touhid)
-@import "./articles";
+//! Articles (Touhid)
+@import "../components/articles/articles";
+
+//! Footer (Antareep)
+@import "../components/footer/footer";
