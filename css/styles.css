@@ -1,1 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");*{box-sizing:border-box;margin:0;padding:0}body{font-size:1.125rem;font-family:"Public Sans",sans-serif}
+#services {
+    background-color: #f3f4f6;
+    z-index: -1;
+    position: relative;
+    line-height: 1.6;
+}
+#services .grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 20px;
+}
+#services .wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+#services .wrapper h1 {
+    padding: 6rem 0 1rem 0;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color:#2d314d
+}
+#services .wrapper h4 {
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #9698a6;
+    padding-bottom: 4rem;
+}
+#services .service h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem 0;
+    color: #2d314d;
+}
+#services .service p {
+    font-size: 1.125rem;
+    color: #9698a6;
+    padding-bottom: 7rem;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 550px){
+    #services{
+        text-align: center;
+    }
+    #services .wrapper h1{
+        line-height: 1.2;
+    }
+    #services .grid{
+        grid-template-columns: 1fr;
+    }
+    
+    
+}
