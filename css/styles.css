@@ -132,3 +132,32 @@ body {
     justify-items: center;
     
 }
+
+
+
+/* Mobile View */
+
+@media(max-width: 916px) {
+    .container h2 {
+        text-align: center;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
+
+@media(max-width: 580px) {
+    .container h2 {
+        text-align: center;
+    }
+
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
