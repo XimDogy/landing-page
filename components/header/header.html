@@ -1,4 +1,49 @@
 <!DOCTYPE html>
 
 <!--! Header (Antareep) -->
-<h1>Header</h1>
+    <!-- nav starts -->
+    <div id="navbar">
+
+        <a href="#" id="nav-logo">
+            <img src="img/logo.svg" alt="logo" />
+        </a>
+        <ul id="drawer" class="nav-links">
+            <li><a>Home</a></li>
+            <li><a>About</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Careers</a></li>
+        </ul>
+
+        <button id="nav-gradient-btn" class="gradient-btn" >Request Invite</button>
+
+
+        <img id="hamburger" src="img/icon-hamburger.svg" alt="hamburger icon" />
+
+        
+    </div>
+
+    <script >
+        let isOpen = false;
+        const drawer = document.getElementById('drawer');
+        const icon = document.getElementById('hamburger');
+        const all = document.getElementById('hero');
+        
+        const showDrawer = () => {
+            if(isOpen) {
+                icon.src = "img/icon-hamburger.svg"; 
+                drawer.classList.replace('nav-drawer', 'nav-links');
+                all.style.opacity = "1";
+            }else {
+                drawer.classList.replace('nav-links', 'nav-drawer');
+                icon.src = "img/icon-close.svg";
+                all.style.opacity = "0.5";
+            }
+            isOpen = !isOpen;
+        }
+        icon.addEventListener('click', showDrawer);
+
+
+    </script>
+
+    <!-- nav end -->
