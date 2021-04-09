@@ -220,6 +220,19 @@ body {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 920px) {
+  #services {
+    text-align: center;
+  }
+  #services .wrapper h1 {
+    line-height: 1.2;
+  }
+  #services .grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media only screen and (max-width: 550px) {
   #services {
     text-align: center;
@@ -233,22 +246,9 @@ body {
   }
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Public Sans';
-  font-size: 16px;
-  background-color: #fafafa;
-}
-
 .container {
   height: 100%;
-  margin: 0 100px;
+  margin: 50px 10%;
 }
 
 .container h2 {
@@ -262,28 +262,42 @@ body {
 .card-2,
 .card-3,
 .card-4 {
-  height: 520px;
-  width: 380px;
+  min-height: 520px;
+  max-width: 380px;
   background-color: #fff;
 }
 
 .cards img {
-  height: 250px;
-  width: 380px;
+  height: 40%;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
 }
 
 .cards p {
-  margin: 18px 80px 0 30px;
+  margin: 18px 18px 0 30px;
   line-height: 1.5rem;
 }
 
 .p-subhead {
-  font-size: 1.5em;
+  font-size: 1.125rem;
   font-weight: 500;
   color: #3a3a3a;
+  font-family: "Public Sans", sans-serif;
+  color: #2d314d;
+}
+
+.p-subhead:hover {
+  color: #31d35c;
+  cursor: pointer;
 }
 
 .text-color {
+  font-size: small;
+  color: #9e9a9a;
+}
+
+.description {
+  font-size: medium;
   color: #9e9a9a;
 }
 
@@ -297,33 +311,33 @@ body {
 }
 
 /* Mobile View */
-@media (max-width: 916px) {
+@media (max-width: 1380px) {
   .container h2 {
+    font-size: xx-large;
     text-align: center;
   }
   .cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 
-@media (max-width: 580px) {
-  .container h2 {
-    text-align: center;
-  }
+@media (max-width: 920px) {
   .cards {
-    display: -ms-grid;
-    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .cards {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 

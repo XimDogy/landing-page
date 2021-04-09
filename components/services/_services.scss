@@ -41,6 +41,20 @@
 
 /* RESPONSIVE */
 
+@media only screen and (max-width: 920px){
+    #services{
+        text-align: center;
+    }
+    #services .wrapper h1{
+        line-height: 1.2;
+    }
+    #services .grid{
+        grid-template-columns: repeat( 2, 1fr);
+    }
+  
+}
+
+
 @media only screen and (max-width: 550px){
     #services{
         text-align: center;
