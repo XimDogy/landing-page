@@ -44,6 +44,20 @@
         icon.addEventListener('click', showDrawer);
 
 
+        function myFunction(x) {
+            if (x.matches) {
+                drawer.classList.replace('nav-drawer', 'nav-links');
+                icon.src = "img/icon-hamburger.svg";
+                all.style.opacity = "1";
+                isOpen = false;
+            }
+        }
+
+        var x = window.matchMedia("(min-width: 700px)")
+        myFunction(x) 
+        x.addListener(myFunction)
+
+
     </script>
 
     <!-- nav end -->

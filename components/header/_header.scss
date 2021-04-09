@@ -1,1 +1,156 @@
 //! Header
+
+#header{
+    width: 100%;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    height: 80px;
+    background: $White;
+}
+
+#nav-logo:hover {
+    cursor: pointer;
+}
+
+.nav-links {
+    display: block;
+    list-style-type: none;
+    justify-content: center;    
+}
+
+.nav-links li  {
+    height: 80px;
+    margin: 0px 12px;
+    float: left;
+}
+
+.nav-links li:hover {
+    background: 
+    linear-gradient(
+        to right, 
+        $lime-green 0%,
+        $bright-cyan 100%
+        )
+        left 
+        bottom
+        $White  
+        no-repeat; 
+        background-size:100% 5px ;
+    }
+    
+.nav-links a {
+    display: block;
+    font-size: $font-size-base;
+    color: $grayish-blue;
+    padding: 30px 5px;
+    font-family: $font-family-base;
+    height: 80px;  
+}
+.nav-links a:hover {
+    color: $dark-blue;
+    cursor: pointer;
+}
+
+.nav-links a:active {
+    color: $very-light-gray;
+}
+
+/* Drawer */
+
+.nav-drawer{
+    color: $dark-blue;
+    position: absolute;
+    height: 40vh;
+    width: 85vw;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    border-radius: 5px;
+    background-color: $White;
+    list-style-type: none;
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: $font-family-base;
+    box-shadow: 0px 50px 50px 5px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.nav-drawer a:hover  {
+    cursor: pointer;
+    color: $grayish-blue;
+}
+
+/* Drawer ends */
+
+/* Gradient Butoon */
+.gradient-btn {
+    height: 50px;
+    width: 200px;
+    border: none;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    text-align: center;
+    border-radius: 25px;
+    text-transform: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: $White;            
+    display: block;
+    background-image: linear-gradient(to right, $lime-green 0%, $bright-cyan  51%, $lime-green  100%)
+}
+
+.gradient-btn:hover  {
+    background-position: right center;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.gradient-btn:active {
+    outline: none;
+    color: $dark-blue;
+}
+
+.gradient-btn:focus {
+    outline: none;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* End of header */
+
+/* RESPONSIVE  HEADER*/
+
+@media only screen and (max-width: 800px) {
+    
+    /* Head */
+    .nav-links, #nav-gradient-btn{
+        display: none;
+    }
+    .nav-drawer {
+        display: flex;
+    }
+
+    #hamburger {
+        display: block;
+    }
+    #navbar {
+        justify-content: space-between;
+        padding: 0 25px;
+    }
+    
+}
