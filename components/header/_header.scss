@@ -2,15 +2,25 @@
 
 #header{
     width: 100%;
+    position: fixed;
+    z-index: 6;
+    height: 90px;
+    background: $White;
 }
 
 #navbar {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center; 
-    height: 80px;
+    height: 90px;
     background: $White;
+}
+#nav-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #nav-logo:hover {
@@ -24,7 +34,7 @@
 }
 
 .nav-links li  {
-    height: 80px;
+    height: 90px;
     margin: 0px 12px;
     float: left;
 }
@@ -47,7 +57,7 @@
     display: block;
     font-size: $font-size-base;
     color: $grayish-blue;
-    padding: 30px 5px;
+    padding: 35px 5px;
     font-family: $font-family-base;
     height: 80px;  
 }
@@ -67,7 +77,7 @@
     position: absolute;
     height: 40vh;
     width: 85vw;
-    top: 100px;
+    top: 110px;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -81,8 +91,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     font-family: $font-family-base;
-    box-shadow: 0px 50px 50px 5px rgba(0,0,0,0.2);
-    z-index: 2;
+    box-shadow: 0px 40px 150px 30px $dark-blue;
+    z-index: 6;
 }
 
 .nav-drawer a:hover  {
@@ -135,7 +145,7 @@
 
 /* RESPONSIVE  HEADER*/
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 985px) {
     
     /* Head */
     .nav-links, #nav-gradient-btn{
@@ -148,9 +158,5 @@
     #hamburger {
         display: block;
     }
-    #navbar {
-        justify-content: space-between;
-        padding: 0 25px;
-    }
-    
+
 }

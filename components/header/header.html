@@ -27,17 +27,14 @@
         let isOpen = false;
         const drawer = document.getElementById('drawer');
         const icon = document.getElementById('hamburger');
-        const all = document.getElementById('hero');
-        
+                
         const showDrawer = () => {
             if(isOpen) {
                 icon.src = "img/icon-hamburger.svg"; 
                 drawer.classList.replace('nav-drawer', 'nav-links');
-                all.style.opacity = "1";
             }else {
                 drawer.classList.replace('nav-links', 'nav-drawer');
                 icon.src = "img/icon-close.svg";
-                all.style.opacity = "0.5";
             }
             isOpen = !isOpen;
         }
@@ -48,7 +45,6 @@
             if (x.matches) {
                 drawer.classList.replace('nav-drawer', 'nav-links');
                 icon.src = "img/icon-hamburger.svg";
-                all.style.opacity = "1";
                 isOpen = false;
             }
         }
